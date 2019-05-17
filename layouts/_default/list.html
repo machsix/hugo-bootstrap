@@ -10,7 +10,7 @@
     <hr>
 </header>
 <section class="blog-post">
-    {{ .Content }}
+    {{ .Content | replaceRE "<table>" "<table class=\"table table-hover\">" | safeHTML }}
 </section>
 {{ end }}
 

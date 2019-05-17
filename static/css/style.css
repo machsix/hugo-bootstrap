@@ -91,7 +91,29 @@ blockquote:before {
     vertical-align: -0.4em;
 }
 
-article table:not([style]) {
+/* Add background color for line number */
+
+div.highlight > div {
+    background-color: #f8f9fa !important
+}
+
+div.highlight  > div > table > tbody > tr > td:nth-child(1)  > pre {
+    background-color: #d7dbe0 !important
+}
+
+div.highlight > div > table > tbody > tr > td > pre {
+    margin: 0px
+}
+
+/* Add bottom boarder */
+
+.table {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #dee2e6;
+}
+
+/* article table:not([style]) {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
@@ -102,16 +124,6 @@ article table:not([style]) {
     display: block;
     overflow-x: auto;
 }
-
-div.highlight > div {
-    background-color: #f8f9fa !important
-}
-
-div.highlight  > div > table > tbody > tr > td:nth-child(1)  > pre {
-    background-color: #d7dbe0 !important
-}
-
-
 
 article table:not([style]) td,
 article table:not([style]) th {
@@ -131,5 +143,23 @@ article table:not([style]) tbody+tbody {
 
 article table:not([style]) {
     background-color: #fff
-}
+} */
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 64px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 64px;
+  background-color: #f5f5f5;
+}

@@ -5,5 +5,5 @@
         {{ partial "post-tags" . }}
         {{ partial "post-categories" . }}
     </header>
-    {{ .Content }}
+    {{ .Content | replaceRE "<table>" "<table class=\"table\">" | safeHTML }}
 </article>

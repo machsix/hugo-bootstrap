@@ -8,7 +8,7 @@
     <hr>
 </header>
 <article class="blog-post">
-    {{ .Content }}
+    {{ .Content  | replaceRE "<table>" "<table class=\"table table-hover\">" | safeHTML }}
 
     {{ if .IsTranslated }}
       <h4>{{ i18n "translations" }}</h4>
