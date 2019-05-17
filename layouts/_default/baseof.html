@@ -18,12 +18,14 @@
     <!-- Inject js -->
     <!-- https://gitlab.com/BluestNight/Midnight/blob/master/layouts/partials/script -->
     {{ if .Page.Params.js }}
-    <script type="text/javascript" src="{{ .Page.Params.js | relURL }}"></script>
+    {{ $secureJS := resources.Get  .Page.Params.js  | resources.Minify | resources.Fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $secureJS.Permalink  }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
     {{ end }}
 
     <!-- Inject CSS-->
     {{ if .Page.Params.css}}
-    <link rel="stylesheet" href="{{ .Page.Params.js | absURL }}">
+    {{ $css := resources.Get .Page.Params.css | resources.Minify }}
+    <link rel="stylesheet" href="{{  $css.Permalink  }}">
     {{ end }}
 
 
