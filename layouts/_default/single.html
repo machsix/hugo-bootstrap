@@ -24,6 +24,27 @@
     {{ partial "related" . }}
 
 </article>
+
+<ul class="nav justify-content-center border-top pt-2 pb-2">
+    <li class="nav-item w-50">
+      {{- if .PrevInSection -}}
+      <a class="nav-link" href='{{ .PrevInSection.Permalink | relURL }}'>
+          {{- partial "icons" "prev" -}}
+          <!-- <span>{{ i18n "previous" }}: </span> -->
+          {{- .PrevInSection.Title -}}
+      </a>
+      {{ end }}
+    </li>
+    <li class="nav-item w-50 text-right">
+        {{- if .NextInSection -}}
+        <a class="nav-link text-right" href='{{ .NextInSection.Permalink | relURL }}'>
+          {{- .NextInSection.Title -}}
+          {{- partial "icons" "next" -}}
+        </a>
+        {{- end -}}
+      </li>
+  </ul>
+</nav>
 {{ if and (not .Params.nocomment) .Site.DisqusShortname }}
   {{ template "_internal/disqus.html" . }}
 {{ end }}

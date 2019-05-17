@@ -11,10 +11,37 @@
     max-width: 100%;
 }
 
+.icon {
+    display: inline-block;
+    stroke: currentColor;
+    fill: none;
+    position: relative
+}
+
+.icon,img.emoji {
+    height: 1em;
+    width: 1em;
+}
+
+/* Consistent color */
+
+a {
+    color: #563d7c
+}
+
 .bd-navbar {
-	min-height: 4rem;
-	background-color: #563d7c;
+    min-height: 4rem;
+    background-color: #563d7c;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.05),inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+#navbarNav a[class=nav-link] {
+    color: #cbbde2
+}
+
+#navbarNav .nav-link.active {
+    color: #fff;
+    font-weight: 600
 }
 
 footer .bd-navbar p {
@@ -22,8 +49,21 @@ footer .bd-navbar p {
     margin: 0
 }
 
+footer a {
+    color: #cbbde2
+}
+
 .badge-primary {
     background-color: #563d7c
+}
+
+.page-item.active .page-link {
+    background-color: #563d7c;
+    border-color: #563d7c
+}
+
+.page-item .page-link {
+    color: #563d7c
 }
 
 blockquote {
@@ -63,6 +103,16 @@ article table:not([style]) {
     overflow-x: auto;
 }
 
+div.highlight > div {
+    background-color: #f8f9fa !important
+}
+
+div.highlight  > div > table > tbody > tr > td:nth-child(1)  > pre {
+    background-color: #d7dbe0 !important
+}
+
+
+
 article table:not([style]) td,
 article table:not([style]) th {
     padding: .75rem;
@@ -82,3 +132,4 @@ article table:not([style]) tbody+tbody {
 article table:not([style]) {
     background-color: #fff
 }
+

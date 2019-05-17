@@ -27,3 +27,6 @@
 
 - id: thanks
   translation: "Hugo template made with ❤ by {{.Xzya}}, inspired by {{.HugoThemeBootstrap4Blog}}"
+
+- id: previous
+  translation: "Previous"

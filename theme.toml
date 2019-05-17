@@ -4,12 +4,12 @@ licenselink = "https://github.com/Xzya/hugo-bootstrap/blob/master/LICENSE.md"
 description = "A simple hugo theme using bootstrap"
 homepage = "https://github.com/Xzya/hugo-bootstrap"
 tags = ["blog", "multilingual", "bootstrap"]
-features = ["blog", "responsive", "Google Analytics", "bootstrap", "multilingual", "i18n"]
+features = ["blog", "responsive", "Google Analytics", "bootstrap", "multilingual", "i18n","katex","disqus"]
 min_version = 0.15
 
 [author]
-  name = "Mihail Cristian Dumitru"
-  homepage = "https://github.com/Xzya"
+  name = "Machsix"
+  homepage = "https://github.com/machsix"
 
 [original]
   author =  "Alan Orth"
