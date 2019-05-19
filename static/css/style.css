@@ -35,15 +35,19 @@ a {
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.05),inset 0 -1px 0 rgba(0,0,0,.1);
 }
 
-#navbarNav a[class=nav-link] {
+#navbar a[class=nav-link] {
     color: #cbbde2
 }
 
-#navbarNav .nav-link.active {
+#navbar .nav-link.active {
     color: #fff;
     font-weight: 600
 }
 
+#navbar svg {
+    height: 2rem;
+    width: 2rem;
+}
 footer .bd-navbar p {
     color: #fff;
     margin: 0

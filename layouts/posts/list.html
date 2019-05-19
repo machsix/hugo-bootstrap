@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{ $truncate := default true .Site.Params.truncate }}
+
+{{ $postpage := where .Pages "Type" "post" }}
+
+{{ range $postpage.GroupByDate "2006" }}
+
+<h2>{{ .Key }}</h2>
+<ul>
+        {{ range .Pages }}
+        {{ .Render "li"}}
+        {{ end }}
+</ul>
+{{ end }}
+
+
+{{ end }}

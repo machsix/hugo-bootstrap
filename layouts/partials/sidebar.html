@@ -5,4 +5,7 @@
     {{ if default true .Site.Params.sidebar.showTaxonomy }}
         {{ partial "taxonomies" . }}
     {{ end }}
+    {{ if default false .Site.Params.sidebar.soundcloud }}
+       {{ partial "soundcloud" . }}
+    {{ end }}
 </aside>
