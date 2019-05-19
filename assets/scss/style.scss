@@ -1,0 +1,213 @@
+$primary-color: #563d7c;
+$link-color: #fff;
+$link-non-active: #cbbde2;
+$footer-height: 64px;
+
+.blog-header,
+.blog-post,
+.blog-pagination {
+  margin-bottom: 2rem;
+}
+
+/* Make sure the image size is reasonable. */
+
+.blog-post img {
+  max-width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  stroke: currentColor;
+  fill: none;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+img.emoji {
+  height: 1em;
+  width: 1em;
+}
+
+/* Consistent color */
+
+a {
+  color: $primary-color;
+}
+
+.bd-navbar {
+  min-height: 4rem;
+  background-color: $primary-color;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#navbar {
+  a[class="nav-link"] {
+    color: $link-non-active;
+  }
+  .nav-link.active {
+    color: $link-color;
+    font-weight: 600;
+  }
+  svg {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+footer {
+  .bd-navbar p {
+    color: $link-color;
+    margin: 0;
+  }
+  a {
+    color: $link-non-active;
+  }
+}
+
+.badge-primary {
+  background-color: $primary-color;
+}
+
+.page-item {
+  &.active .page-link {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+  .page-link {
+    color: $primary-color;
+  }
+}
+
+blockquote {
+  color: #999;
+  border-left: 0.5rem solid #d7dbe0;
+  background-color: #f8f9fa;
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  p {
+    margin-top: 0;
+    padding-left: 1rem;
+    font-style: italic;
+  }
+  &:before {
+    color: #ccc;
+    content: "\201C";
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+}
+
+/* Add background color for line number */
+
+div.highlight > div {
+  background-color: #f8f9fa !important;
+  > table > tbody > tr > td {
+    &:nth-child(1) > pre {
+      background-color: #d7dbe0 !important;
+    }
+    > pre {
+      margin: 0px;
+    }
+  }
+}
+
+/* style for copy button */
+.copy-code-button {
+    background-color: #f8f8f8;
+    border-color: #272822;
+    border: 0;
+
+    /* right-align */
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+
+    margin-bottom: -2px;
+    padding: 3px 8px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.copy-code-button:hover {
+    cursor: pointer;
+    background-color: #7f7f7f;
+}
+
+.copy-code-button:focus {
+    /* Avoid an ugly focus outline on click in Chrome,
+       but darken the button for accessibility.
+       See https://stackoverflow.com/a/25298082/1481479 */
+    background-color: #E6E6E6;
+    outline: 0;
+}
+
+.copy-code-button:active {
+    background-color: #D9D9D9;
+}
+
+/* Add bottom boarder */
+
+.table {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #dee2e6;
+}
+
+/* article table:not([style]) {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      border-bottom-color: #dee2e6;
+      display: block;
+      overflow-x: auto;
+  }
+
+  article table:not([style]) td,
+  article table:not([style]) th {
+      padding: .75rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6
+  }
+
+  article table:not([style]) thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6
+  }
+
+  article table:not([style]) tbody+tbody {
+      border-top: 2px solid #dee2e6
+  }
+
+  article table:not([style]) {
+      background-color: $link-color
+  } */
+
+/* Sticky footer styles
+  -------------------------------------------------- */
+
+
+/* responsive hight */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: $footer-height;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  /* Set the fixed height of the footer here */
+  height: $footer-height;
+}

@@ -6,6 +6,10 @@ This is a simple Hugo theme using [Bootstrap v4](https://getbootstrap.com/), ins
 
 You can find a demo [here](https://themes.gohugo.io/theme/hugo-bootstrap/).
 
+## Usage
+
+You need to have extended hugo to build it from scratch
+
 ## Screenshots
 
 ![preview](https://raw.githubusercontent.com/Xzya/hugo-bootstrap/master/images/screenshot.png)
