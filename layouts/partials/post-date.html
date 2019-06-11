@@ -1,11 +1,15 @@
-{{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
+{{ $dateFormat := default "2006, Jan 02" (index .Site.Params "date_format") }}
 
 {{ $author := .Params.author | default .Site.Params.author }}
 <div class="blog-post-date text-secondary">
     {{ if not .Date.IsZero }}
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $dateFormat }}</time>
+       <span class="blog-meta">{{ partial "icons" "calendar" }} <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $dateFormat }}</time></span>
     {{ end }}
+    {{ if gt .Lastmod .Date }}
+       <span class="blog-meta">{{ partial "icons" "clock" }} <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Lastmod.Format $dateFormat }}</time></span>
+    {{ end }}
+
     {{ if $author }}
-        {{ i18n "by" }} <span rel="author">{{ $author }}</span>
+       <span class="blog-meta">{{ partial "icons" "author" }} <span rel="author">{{ $author }}</span></span>
     {{ end }}
 </div>
