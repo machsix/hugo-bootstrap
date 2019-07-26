@@ -9,7 +9,7 @@
 </header>
 <article class="blog-post">
     <!-- set table class from bootstrap -->
-    {{ .Content  | replaceRE "<table>" "<table class=\"table table-hover\">" | safeHTML }}
+    {{ partial "post-content" .Content }}
 
     {{ if .IsTranslated }}
       <h4>{{ i18n "translations" }}</h4>

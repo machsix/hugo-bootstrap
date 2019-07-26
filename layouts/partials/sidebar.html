@@ -1,4 +1,4 @@
-<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+<div class="col-12 col-lg-3 ml-auto sticky-top blog-sidebar">
     {{ if default true .Site.Params.sidebar.showRecent }}
         {{ partial "recent" . }}
     {{ end }}
@@ -8,4 +8,4 @@
     {{ if default false .Site.Params.sidebar.soundcloud }}
        {{ partial "soundcloud" . }}
     {{ end }}
-</aside>
+</div>
