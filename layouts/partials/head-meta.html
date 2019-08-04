@@ -70,6 +70,12 @@
 </script>
 {{ end }}
 
+<!-- plotly -->
+{{ if .Page.Params.plotly }}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{{ end }}
+
+<!-- Inject internal resources, resources should be placed in asset folder -->
 <!-- Inject js -->
 <!-- https://gitlab.com/BluestNight/Midnight/blob/master/layouts/partials/script -->
 {{ if .Page.Params.js }}
@@ -81,4 +87,11 @@
 {{ if .Page.Params.css}}
 {{ $css := resources.Get .Page.Params.css | resources.Minify }}
 <link rel="stylesheet" href="{{  $css.Permalink  }}">
+{{ end }}
+
+<!-- Inject external resources -->
+{{ if .Params.exjs }}
+    {{ range .Params.exjs }}
+        <script type="text/javascript" src="{{ . }}"></script>
+    {{ end }}
 {{ end }}
